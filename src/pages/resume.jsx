@@ -1,5 +1,6 @@
-import React from "react"
-export default function Resume() {
+import React from "react";
+import "./resume.css";
+function Resume() {
   return (
     <div className="resume-container">
       <div className="resume-card">
@@ -11,8 +12,12 @@ export default function Resume() {
         <section className="resume-section">
           <h2>Personal Details</h2>
           <ul>
-            <li><strong>Age:</strong> 21</li>
-            <li><strong>Gender:</strong> Male</li>
+            <li>
+              <strong>Age:</strong> 21
+            </li>
+            <li>
+              <strong>Gender:</strong> Male
+            </li>
           </ul>
         </section>
 
@@ -50,4 +55,6 @@ export default function Resume() {
       </div>
     </div>
   );
-}       
+}
+
+export default Resume;
