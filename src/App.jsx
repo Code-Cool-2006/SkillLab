@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Resume from "./pages/resume";
+import Login from "./pages/Login";
 
 function Home() {
   const [count, setCount] = useState(0);
@@ -18,7 +19,8 @@ function Home() {
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Login />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/resume" element={<Resume />} />
     </Routes>
   );
