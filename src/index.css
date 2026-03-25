@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f3f4f6;
