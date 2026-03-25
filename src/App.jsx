@@ -6,14 +6,24 @@ import Spotify from "./pages/Spotify";
 import Navbar from "./components/navbar";
 import styled from "styled-components";
 import Quiz from "./pages/Quiz";
+import Weather from "./components/Weather";
 
 const StyledWrapper = styled.div`
+  .page-container {
+    padding-top: 100px; /* To prevent content from going under the fixed navbar */
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: calc(100vh - 100px);
     width: 100%;
     background-color: #000;
     color: #fff;
@@ -39,13 +49,16 @@ function App() {
   return (
     <StyledWrapper>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/spotify" element={<Spotify />} />
-        <Route path="/quiz" element={<Quiz />} />
-      </Routes>
+      <div className="page-container">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/spotify" element={<Spotify />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/weather" element={<Weather/>}/>
+        </Routes>
+      </div>
     </StyledWrapper>
   );
 }
